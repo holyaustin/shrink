@@ -7,8 +7,8 @@ import { appFont, inter } from './fonts'
 
 export const metadata: Metadata = {
   manifest: '/manifest.json',
-  title: 'Tsunameme',
-  description: 'Tsunameme gives anyone the superpower to create impressive gifs with a couple lines of text.',
+  title: 'SHRINK.AI',
+  description: 'Shrink.ai is an innovative generative AI platform developed to enhance social media content delivery with real-time compression and optimization. By harnessing LivePeer&aposs decentralized video streaming and Zora&#39s blockchain capabilities, Shrink.ai offers creators efficient tools for content scalability and security.',
 }
 
 export const viewport: Viewport = {

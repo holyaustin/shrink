@@ -31,7 +31,7 @@ export default function Home() {
     return (
         <>
             <div className='w-full h-svh flex items-center justify-center'>
-                <div className='font-bold text-primary text-5xl'>TSUNAMEME</div>
+                <div className='font-bold text-primary text-5xl'>SHRINK.AI</div>
             </div>
         </>
     )
