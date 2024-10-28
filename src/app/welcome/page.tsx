@@ -22,25 +22,21 @@ export default function Page() {
     }
 
     return (
-        <div className={`${styles.main} ${appFont.className} w-full min-h-svh bg-gradient-to-b from-50% from-primary to-[#98CDB1]`}>
+        <div className={`${styles.main} ${appFont.className} w-full min-h-svh bg-black`}>
             <div className={`${styles.wave}`} />
-            <div className={styles.centerLanding}>
-                <div className='font-bold text-background text-5xl'>TSUNAMEME</div>
+            <div className={styles.centerLanding }>
+                <div className='font-bold text-background text-5xl mb-7'>SHRINK.AI</div>
                 <div className='font-semibold text-background text-base'>
-                    <p>Making GIF expressions</p>
-                    <p>with generative AI</p>
+                    <p className="text-4xl text-yellow-200">Create, Own, Share or Sell.  </p>
+                    <Spacer y={4} />
+                    <p className="text-xl bg-black">Image and Video creators tool for content scalability.</p>
                 </div>
                 <Spacer y={4} />
                 <LandingPromoComponent />
                 <Spacer y={8} />
-                <PrimaryButton onPress={handleTxt2img}>Get Started</PrimaryButton>
+                <PrimaryButton onPress={handleTxt2img} className='text-2xl font-semibold w-full'>Get Started</PrimaryButton>
                 <Spacer y={4} />
-                {
-                    gContext.installPromtEvt && <>
-                        <SecondaryButton onPress={handleDownload} className={styles.installBtn} > Install the desktop app for better experience</SecondaryButton>
-                        <Spacer y={4} />
-                    </>
-                }
+      
             </div >
         </div >
     )

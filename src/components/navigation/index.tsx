@@ -21,6 +21,7 @@ const NavigationComponent: React.FC = () => {
     const gContext = useGenerationContext()
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [menuItems] = useState<string[][]>([
+        ['Home', '/welcome'],
         ['Create', '/txt2img'],
         ['Gallery', '/gallery'],
         ['About', '/about']
@@ -63,12 +64,12 @@ const NavigationComponent: React.FC = () => {
     return (<>
 
         {navIcon != NavIcon.NONE &&
-            <header className='py-1'>
+            <header className='py-1 mb-5'>
                 <Navbar className="text-primary" onMenuOpenChange={setIsMenuOpen}>
                     <NavbarContent>
                         {renderIcon()}
                         <NavbarBrand className={`${appFont.className} font-semibold`}>
-                            TSUNAMEME
+                            SHRINK.AI
                         </NavbarBrand>
                     </NavbarContent>
                     <NavbarMenu className="w-full m-auto">

@@ -1,5 +1,6 @@
 .main {
     text-align: center;
+    background-image: url('/memphis.svg');
 }
 
 .centerSection {
@@ -11,6 +12,7 @@
 }
 
 .centerLanding {
+
     width: 90%;
     max-width: 512px;
     margin: auto;
@@ -106,7 +108,7 @@
 }
 
 .renderBtn {
-    background-color: transparent;
+    background-color: blue;
     position: absolute;
     right: -8px;
     bottom: -8px;
@@ -138,7 +140,7 @@
 
 .wave {
     background-image: url('/memphis.svg');
-    height: 7rem;
+    height: 2rem;
     width: 100%;
     background-repeat: repeat-x;
 }
@@ -168,6 +170,7 @@
 
     .main {
         transform: scale(1);
+        background-image: url('/memphis.svg');
     }
 
     .menuItemText {

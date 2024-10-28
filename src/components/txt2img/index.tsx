@@ -2,6 +2,7 @@
 import { Txt2imgInput, GenerationOutputItem, DEFAULT_IMG_WIDTH, DEFAULT_IMG_HEIGHT, DEFAULT_IMG_NUM_OUTPUT, DEFAULT_T2I_STEPS, DEFAULT_T2I_CFG } from "@/libs/types";
 import { Input, Spacer, Textarea, SelectItem, Select, Button } from '@nextui-org/react'
 import { txt2img } from "@/actions";
+import { useRouter } from 'next/navigation';
 import { useGenerationContext } from "@/context/generation-context";
 import { Analytics } from "@/libs/analytics";
 import { usePrivy } from "@privy-io/react-auth"
@@ -22,6 +23,7 @@ interface Txt2ImgComponentProps {
 }
 
 const Txt2ImgComponent: React.FC<Txt2ImgComponentProps> = (props: Txt2ImgComponentProps) => {
+    const router = useRouter()
     const MAX_OUTPUT_COUNT = 12
     const { authenticated, user } = usePrivy()
     const gContext = useGenerationContext()
@@ -126,11 +128,11 @@ const Txt2ImgComponent: React.FC<Txt2ImgComponentProps> = (props: Txt2ImgCompone
     const renderGenerateButton = () => {
         switch (genType) {
             case GenRequestType.FIRSTTIME:
-                return <PrimaryButton isDisabled={pPromptValue.length === 0} isLoading={isLoading} onPress={generateImage}>Generate</PrimaryButton>
+                return <PrimaryButton className='font-bold text-2xl w-full text-white'  isDisabled={pPromptValue.length === 0} isLoading={isLoading} onPress={generateImage}>Generate</PrimaryButton>
             case GenRequestType.REQUEST_MORE:
-                return <SecondaryButton isDisabled={pPromptValue.length === 0 || gContext.t2iOutputs.length >= MAX_OUTPUT_COUNT} isLoading={isLoading} onPress={generateImage}>Fetch more images</SecondaryButton>
+                return <SecondaryButton className='font-bold text-2xl w-full' isDisabled={pPromptValue.length === 0 || gContext.t2iOutputs.length >= MAX_OUTPUT_COUNT} isLoading={isLoading} onPress={generateImage}>Fetch more images</SecondaryButton>
             case GenRequestType.REGENERATE:
-                return <SecondaryButton isDisabled={pPromptValue.length === 0} isLoading={isLoading} onPress={generateImage}>Regenerate</SecondaryButton>
+                return <SecondaryButton className='font-bold text-2xl w-full' isDisabled={pPromptValue.length === 0} isLoading={isLoading} onPress={generateImage}>Regenerate</SecondaryButton>
             default:
                 return <></>
         }
@@ -139,12 +141,12 @@ const Txt2ImgComponent: React.FC<Txt2ImgComponentProps> = (props: Txt2ImgCompone
     return (
         <>
 
-            <div className='relative'>
+            <div className='relative bg-white'>
                 <Textarea
                     radius="sm"
                     maxRows={3}
                     label=''
-                    placeholder="Write your prompt here"
+                    placeholder="Write your  prompt"
                     value={pPromptValue}
                     errorMessage={errorMessage}
                     onValueChange={handlePPromptValueChange}
@@ -153,7 +155,7 @@ const Txt2ImgComponent: React.FC<Txt2ImgComponentProps> = (props: Txt2ImgCompone
                         inputWrapper: "border-primary pb-8",
                     }}
                 />
-                <Button isDisabled={isLoading} isIconOnly size="lg" variant="light" className={styles.renderBtn} onPress={() => { handlePPromptValueChange(gContext.shufflePrompt()) }}>
+                <Button  isDisabled={isLoading} isIconOnly size="lg" variant="light" className={styles.renderBtn}  onPress={() => { handlePPromptValueChange(gContext.shufflePrompt()) }}>
                     <FaDice size={26} />
                 </Button>
 

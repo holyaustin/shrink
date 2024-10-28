@@ -32,9 +32,9 @@ export default function Page() {
 
     return (
         <>
-            <section className={`${styles.main} ${appFont.className}`}>
+            <section className={`${styles.main} ${appFont.className}  bg-black`}>
                 {gContext.isReady && <div className={styles.centerSection}>
-                    <div className='font-medium'>Step 1 of 3: Write the prompt</div>
+                    <div className='font-medium bg-orange-200 px-4 py-2 mb-5'>Step 1 of 3: Write the prompt</div>
                     <Spacer y={2} />
                     {imageOutputs.length > 0 && <Carousel imageOutputs={imageOutputs} selectedOutputIndex={selectedOutputIndex} onImageOutputSelected={setSelectedOutputIndex} />}
                     <Txt2ImgComponent

@@ -68,10 +68,10 @@ export const InstallPromo: React.FC<InstallPromoProps> = (props: InstallPromoPro
         <div className={`${styles.main} ${appFont.className} w-full min-h-svh bg-gradient-to-b from-50% from-primary to-[#98CDB1]`}>
             <div className={`h-28 w-full flex bg-img bg-repeat-x ${styles.wave}`} />
             <div className={`${styles.centerLanding} text-white`}>
-                <div className='font-bold text-background text-5xl'>TSUNAMEME</div>
+            <div className='font-bold text-background text-5xl'>SHRINK.AI</div>
                 <div className='font-semibold text-background text-base'>
-                    <p>Making GIF expressions</p>
-                    <p>with generative AI</p>
+                    <p className="text-3xl text-red-300">Content delivery with real-time compression and optimization.  </p>
+                    <p>Image and Video creators efficient tools for content scalability.</p>
                 </div>
                 <Spacer y={4} />
                 <div className='flex justify-center items-center'>
