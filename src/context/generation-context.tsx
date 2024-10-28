@@ -141,15 +141,27 @@ export default function GenerationContextProvider({ children }: { children: Reac
     };
     const shufflePrompt = (): string => {
         const prompts = [
-            "Kyoto Animation stylized anime mixed with tradition Chinese artworks~ A dragon flying at modern cyberpunk fantasy world. Cinematic Lighting, incredible details, aerial view",
-            "A strikingly mystical creature, reminiscent of a large, magical monster, takes center stage in this vintagepunk artwork. The image, possibly a captivating painting or a carefully captured photograph, showcases an awe-inspiring big white creature with an ethereal aura. Its mottled shade of white encompasses a weathered yet mesmerizing appearance, emanating an air of enigmatic beauty.",
-            "HDR photo of woman, spiral curls, long auburn hair, (freckles:0.6), beautiful low cut blouse, long skirt, sitting on a chair in a dark room, amazing smile, perfect eyes . High dynamic range, vivid, rich details, clear shadows and highlights, realistic, intense, enhanced contrast, highly detailed",
-            "90's aesthetic, boy, Anime, spaceship, coca-cola",
-            "hajime sorayama 80s retro futurism sci-fi concept contemporary illustration fantasy landscape sky clouds robot cyborg girl futuristic city skyline aurora borealis stars space ocean beach palm trees biome island night gliter sparkly metallic irridescent holographic neon (jacket miniskirt stockings high heels:1.5) uniform revealing pose long flowing hair",
-            "I have nowhere to go in this destroyed world, digital illustration, emotionally profound, expressionism, dramatic, gloomy, dark, 8k, high quality",
-            "Lots of bunnies smiling with flowers and hearts in the background",
-            "A clown in a green suit is running away from a tornado",
-            "A fit girl, athletic, wearing skirt and blue tanktop. She is standing in a park."
+    "An image of a globe with cracks forming, representing divisions caused by economic sanctions.",
+"2. A video depicting a digital chessboard with world leaders as chess pieces.",
+"3. An animated timeline showing major economic downturns across different countries.",
+"4. A graphic representation of fluctuating oil barrels impacting international relations.",
+"5. A dystopian cityscape blending economic statistics and symbols of political power.",
+"6. A visual metaphor of a global tug-of-war, with nations pulling on a rope made of currency notes.",
+"7. A video collage of news footage detailing rising inflation and its social impact.",
+"8. An art piece depicting diplomacy as a complex spider web of nations and interests.",
+"9. A visualization of a stormy sea with ships carrying flags representing trade agreements.",
+"10. A split-frame image showing affluence on one side and poverty on the other.",
+"11. A creative rendering of digital data streams battling with traditional currencies.",
+"12. A virtual diorama of a global financial summit taking place at war-torn locations.",
+"13. A conceptual piece showing a digital world map with regions flickering like unstable signals.",
+"14. A video journal showing the progression of political tensions as breaking news headlines.",
+"15. An abstract image of world leaders trapped in a gigantic hourglass filled with sand and coins.",
+"16. A series of portraits of diverse global citizens, each overlaid with their country's economic issues.",
+"17. A video narrative contrasting peaceful diplomatic discussions with backgrounds of warfare.",
+"18. An imaginative artwork of a phoenix representing economic cycles, rising from ashes marked by conflict.",
+"19. A data visualization mapping the rise and fall of economies as roller coasters.",
+"20. An AI-generated story depicting the clash between traditional media and rising digital economies."
+            
         ]
         return prompts[Math.floor(Math.random() * prompts.length)]
 
