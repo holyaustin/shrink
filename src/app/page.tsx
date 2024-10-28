@@ -1,5 +1,5 @@
 'use client'
-import {  Spacer, Progress } from "@nextui-org/react";
+import {   Progress } from "@nextui-org/react";
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { usePrivy } from '@privy-io/react-auth'
