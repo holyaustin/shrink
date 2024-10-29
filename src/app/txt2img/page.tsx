@@ -43,7 +43,7 @@ export default function Page() {
                     <Spacer y={4} />
                     {imageOutputs.length > 0 &&
                         <>
-                            <PrimaryButton onPress={handleClickNext}>Next</PrimaryButton>
+                            <PrimaryButton onPress={handleClickNext} className="font-extrabold w-full text-2xl text-white">Next</PrimaryButton>
                             <Spacer y={4} />
                         </>}
                 </div>}

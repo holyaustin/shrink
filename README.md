@@ -1,4 +1,4 @@
-# SHRINK.AI : A Web3 enabled social media AI platform for images and video generation with LivePeer and 
+# SHRINK.AI : A Web3 enabled social media AI platform for images and video generation with LivePeer and Zora,
 
 ### Shrink.ai Project Overview
 
@@ -17,8 +17,8 @@
 5. **Tech Stack Used:**
    - LivePeer for decentralized video streaming.
    - Zora Blockchain for secure transactions and content ownership.
-   - Python and TensorFlow for AI algorithm development.
-   - React.js for the user interface.
+   - Next.js, TailwindCSS for the client / user interface.
+   - Hardhat, ethers.js for web3
    - Node.js for backend operations.
    - AWS for cloud infrastructure and storage solutions.
 
@@ -36,16 +36,8 @@
    - Enhance blockchain functionalities to support a broader spectrum of monetization strategies.
    - Initiate global outreach to advocate for sustainable, transparent content delivery practices. 
 
-   ### 1. Project / Team name
 
-Museum 3
-![home](./bannerblack.png)
-
-### 2. Short description about the project
-
-MUSEUM 3 is a Web3 museum which is a digital platform where users can explore and interact with various exhibits or collections while maintaining privacy through zero-knowledge proofs. Zero-knowledge proofs allow users to verify information without revealing the actual data, ensuring anonymity and security. Visitors to the museum could navigate through galleries, view artifacts, and engage with multimedia content, all while their identities and interactions remain confidential.
-
-### 3. Discord and Telegram username for the team’s person of contact
+### Discord and Telegram username for the team’s person of contact
 
 discord new - holyaustin
 
@@ -53,24 +45,16 @@ telegram - @holyaustin
 
 twitter (X) : @holyaustin
 
-### 4. Repository with project’s code and demo site
+### Repository with project’s code and demo site
 
 <https://github.com/holyaustin/shrink>
 
 <https://shrinkai.vercel.app/>
 
-### 5. Video demo
+### Video demo
 
 <https://youtu.be/>
 
-
-## Tech Stack Used
-
-Client: Next.js, TailwindCSS, web3.js, Theme UI
-
-web3:  Hardhat, ethers.js, IPFS / Filecoin, XMTP, EthSign
-
-BlockChain: Arbitrum Sepolia Testnet, Neon Devnet, Morph Testnet and Gnosis Chiado Testnet
 
 ## To run the dapp Locally
 

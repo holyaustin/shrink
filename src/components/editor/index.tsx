@@ -161,7 +161,7 @@ const Editor: React.FC<EditorProps> = (props: EditorProps) => {
         wmimg.onload = () => {
             setWatermark(wmimg)
         }
-        wmimg.src = '/watermark1024.png';
+        wmimg.src = '/shrink.png';
         document.addEventListener("visibilitychange", onVisibilityChange);
 
         return () => {

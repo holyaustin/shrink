@@ -124,7 +124,7 @@ export default function Page() {
             <ToastContainer />
             {gContext.isReady && <section className={`${styles.main} ${appFont.className}`}>
                 <div className={styles.centerSection}>
-                    <div className='font-medium'>Step 2 of 3: Add your caption</div>
+                    <div className='font-medium bg-orange-200 px-4 py-2 mb-5'>Step 2 of 3: Add your caption</div>
                     <Spacer y={2} />
                     {t2iOutput &&
                         <Editor
@@ -138,9 +138,11 @@ export default function Page() {
                 {t2iOutput &&
                     <div className={styles.centerSection}>
                         <Spacer y={4} />
-                        <SecondaryButton isLoading={isPrepShare} onPress={handleShare}>Share image</SecondaryButton>
+                        <PrimaryButton onPress={handleClickToVideo} className="font-extrabold w-full text-2xl text-white">Mint on Zora</PrimaryButton>
                         <Spacer y={4} />
-                        <PrimaryButton onPress={handleClickToVideo}>GIF it</PrimaryButton>
+                        <SecondaryButton isLoading={isPrepShare} onPress={handleShare} className="font-extrabold w-full text-2xl text-white bg-yellow-400 py-6">Share Image</SecondaryButton>
+                        <Spacer y={4} />
+                        <PrimaryButton onPress={handleClickToVideo} className="font-extrabold w-full text-2xl text-white" >Shrink to Video</PrimaryButton>
                         <Spacer y={4} />
                     </div>}
             </section >}

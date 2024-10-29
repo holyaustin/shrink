@@ -128,11 +128,11 @@ const Txt2ImgComponent: React.FC<Txt2ImgComponentProps> = (props: Txt2ImgCompone
     const renderGenerateButton = () => {
         switch (genType) {
             case GenRequestType.FIRSTTIME:
-                return <PrimaryButton className='font-bold text-2xl w-full text-white'  isDisabled={pPromptValue.length === 0} isLoading={isLoading} onPress={generateImage}>Generate</PrimaryButton>
+                return <PrimaryButton className='text-2xl w-full font-extrabold text-white'  isDisabled={pPromptValue.length === 0} isLoading={isLoading} onPress={generateImage}>Generate</PrimaryButton>
             case GenRequestType.REQUEST_MORE:
-                return <SecondaryButton className='font-bold text-2xl w-full' isDisabled={pPromptValue.length === 0 || gContext.t2iOutputs.length >= MAX_OUTPUT_COUNT} isLoading={isLoading} onPress={generateImage}>Fetch more images</SecondaryButton>
+                return <SecondaryButton className='text-2xl w-full font-extrabold text-white bg-yellow-400 py-6' isDisabled={pPromptValue.length === 0 || gContext.t2iOutputs.length >= MAX_OUTPUT_COUNT} isLoading={isLoading} onPress={generateImage}>Fetch more images</SecondaryButton>
             case GenRequestType.REGENERATE:
-                return <SecondaryButton className='font-bold text-2xl w-full' isDisabled={pPromptValue.length === 0} isLoading={isLoading} onPress={generateImage}>Regenerate</SecondaryButton>
+                return <SecondaryButton className='py-6 text-2xl w-full font-extrabold text-white bg-yellow-400' isDisabled={pPromptValue.length === 0} isLoading={isLoading} onPress={generateImage}>Regenerate</SecondaryButton>
             default:
                 return <></>
         }
