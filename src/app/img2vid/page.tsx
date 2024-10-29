@@ -130,7 +130,7 @@ export default function Page() {
             <ToastContainer />
             <section className={`${styles.main} ${appFont.className}`}>
                 {gContext.isReady && <div className={styles.centerSection}>
-                    <div className='font-medium'>Step 3 of 3: Make it a GIF </div>
+                    <div className='font-medium bg-orange-200 px-4 py-2 mb-5'>Step 3 of 3: Shrink to video </div>
                     <Spacer y={4} />
                     <div>
                         {gContext.overlayImageData && <>
@@ -165,7 +165,7 @@ export default function Page() {
                     <Spacer y={4} />
                     <PrimaryButton
                         isLoading={isGeneratingVideo}
-                        onPress={handleGenerateVideoClick}>Render
+                        onPress={handleGenerateVideoClick}>Render video
                     </PrimaryButton>
                     <Spacer y={4} />
                 </div>}

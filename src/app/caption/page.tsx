@@ -14,6 +14,7 @@ import { appFont } from "../fonts";
 import { PrimaryButton, SecondaryButton } from "@/components/buttons";
 import { uploadImage } from "@/actions";
 import { share } from "@/libs/share-utils";
+import ShareLink from 'react-twitter-share-link';
 
 
 const Editor = dynamic(() => import("@/components/editor"), {
@@ -96,6 +97,7 @@ export default function Page() {
             console.log(url)
             if (url) {
                 setImageShareUrl(url)
+                
             }
         }
         catch (e) {
@@ -140,10 +142,22 @@ export default function Page() {
                         <Spacer y={4} />
                         <PrimaryButton onPress={handleClickToVideo} className="font-extrabold w-full text-2xl text-white">Mint on Zora</PrimaryButton>
                         <Spacer y={4} />
+                        <div>
+                <ShareLink link="https://shrinkai.vercel.app/txt2img" text="Generate images and videos using our on-demand AI platform powered by #zora and #livepeer" hashtags="blockchain ai generative_ai encode">
+              {(link) => (
+                  <button type="button" className="w-full bg-yellow-400 text-white font-extrabold text-2xl py-2 px-12 rounded-full">                   
+                  <a href={link} target="_blank" rel="noreferrer">Share on Twitter</a></button>
+                  )}
+            </ShareLink>
+                </div>
+                <Spacer y={4} />
+                <PrimaryButton onPress={handleClickToVideo} className="font-extrabold w-full text-2xl text-white" >Shrink to Video</PrimaryButton>
+                   
+                <Spacer y={4} />
                         <SecondaryButton isLoading={isPrepShare} onPress={handleShare} className="font-extrabold w-full text-2xl text-white bg-yellow-400 py-6">Share Image</SecondaryButton>
                         <Spacer y={4} />
-                        <PrimaryButton onPress={handleClickToVideo} className="font-extrabold w-full text-2xl text-white" >Shrink to Video</PrimaryButton>
-                        <Spacer y={4} />
+
+
                     </div>}
             </section >}
         </>
